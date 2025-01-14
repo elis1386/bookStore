@@ -2,7 +2,7 @@ using BookStore.Core.Models;
 
 namespace BookStore.DataAccess.Repositories;
 
-public interface IBookRepository
+public interface IBooksRepository
 {
     Task<Guid> AddBook(Book book);
     Task<Guid> DeleteBook(Guid id);

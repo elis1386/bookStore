@@ -1,3 +1,9 @@
+using BookStore.Application.Services;
+using BookStore.Core.Abstractions;
+using BookStore.DataAccess;
+using BookStore.DataAccess.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +12,13 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<BookStoreDBContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(BookStoreDBContext)));
+});
+builder.Services.AddScoped<IBooksRepository, BooksRepository>();
+builder.Services.AddScoped<IBooksService, BooksService>();
 
 var app = builder.Build();
 
