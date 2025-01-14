@@ -7,3 +7,8 @@ public record BookResponse(
     decimal Price
     );
 
+public record BookRequest(
+    string Title, 
+    string Description, 
+    decimal Price
+    );

@@ -26,6 +26,10 @@ namespace BookStore.Core.Models
             return (book, error);
 
         }
-        
+
+        public void Deconstruct(out object book, out object error)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
