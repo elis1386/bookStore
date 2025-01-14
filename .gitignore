@@ -1,0 +1,64 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.log
+*.tlog
+*.ide
+*.cache
+*.pdb
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Entity Framework
+Migrations/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# DotNet
+*.dotnet_toolchain
+.dotnet_toolchain/
+
+# Docker
+**/[Dd]ockerfile*
+**/[Dd]ocker-compose*
+**/docker-compose.override.yml
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Test Results
+TestResults/
+
+# IDE-specific files
+.vs/
+.idea/
+
+# Local settings
+*.local.settings.json
