@@ -7,14 +7,9 @@ namespace BookStoreApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class BooksController : ControllerBase
+    public class BooksController(IBooksService booksService) : ControllerBase
     {
-        private readonly IBooksService _booksService;
-
-        public BooksController(IBooksService booksService)
-        {
-            _booksService = booksService;
-        }
+        private readonly IBooksService _booksService = booksService;
 
         [HttpGet]
         public async Task<ActionResult<List<BookResponse>>> GetBooks()

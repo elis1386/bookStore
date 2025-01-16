@@ -2,7 +2,6 @@ using System;
 using BookStore.Core.Abstractions;
 using BookStore.Core.Models;
 using BookStore.DataAccess.Repositories;
-using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace BookStore.Application.Services;
 
